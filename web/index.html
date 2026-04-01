@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>e-order-board</title>
+    <link rel="stylesheet" href="/web/styles.css" />
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <div>
+            <h1>e-order-board</h1>
+            <p class="subtitle">Real-time order workflow with WebSocket updates</p>
+        </div>
+        <div id="connectionBadge" class="badge badge-warning">Connecting...</div>
+    </header>
+
+    <section class="panel form-panel">
+        <h2>Create Order</h2>
+        <form id="orderForm">
+            <div class="form-row">
+                <label for="customerName">Customer Name</label>
+                <input id="customerName" name="customerName" type="text" placeholder="Anna" />
+            </div>
+
+            <div class="form-row">
+                <label for="itemName">Item Name</label>
+                <input id="itemName" name="itemName" type="text" placeholder="Latte" />
+            </div>
+
+            <div class="form-row">
+                <label for="quantity">Quantity</label>
+                <input id="quantity" name="quantity" type="number" min="1" value="1" />
+            </div>
+
+            <div class="form-actions">
+                <button id="submitBtn" type="submit">Create Order</button>
+            </div>
+
+            <p id="formError" class="error-text"></p>
+        </form>
+    </section>
+
+    <section class="board">
+        <div class="column">
+            <div class="column-header">
+                <h3>New</h3>
+                <span id="count-new" class="count">0</span>
+            </div>
+            <div id="col-new" class="column-body"></div>
+        </div>
+
+        <div class="column">
+            <div class="column-header">
+                <h3>Preparing</h3>
+                <span id="count-preparing" class="count">0</span>
+            </div>
+            <div id="col-preparing" class="column-body"></div>
+        </div>
+
+        <div class="column">
+            <div class="column-header">
+                <h3>Ready</h3>
+                <span id="count-ready" class="count">0</span>
+            </div>
+            <div id="col-ready" class="column-body"></div>
+        </div>
+    </section>
+</div>
+
+<script src="/web/app.js"></script>
+</body>
+</html>
