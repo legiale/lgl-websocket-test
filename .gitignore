@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Build output
+app
+dist/
+bin/
+
+# Logs
+*.log
