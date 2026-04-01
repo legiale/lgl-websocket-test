@@ -84,31 +84,48 @@ go mod tidy
 ```bash
 go run main.go
 ```
+
 ###4. Open browser
 http://localhost:8080
+
 
 ###5. Test realtime
 Open 2 tabs
 Create/update orders
 Verify instant sync
 
-
+==========================================
 📊 Example Use Cases
+
 Restaurant kitchen dashboard
+
 Order tracking system
+
 Admin monitoring panel
+
 Live operations board
 
+
 🔧 Future Improvements
+
 Add Redis Pub/Sub for scaling
+
 Add database (PostgreSQL/MySQL)
+
 Add authentication (JWT)
+
 Add Docker + CI/CD
+
 Add role-based UI
 
 
 📌 Key Takeaways
+
 Demonstrates WebSocket-based real-time architecture
+
 Shows Go concurrency handling
+
 Includes production deployment setup
+
 Clean and minimal implementation for interviews
+
